@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>cart</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
+<body onload="showCart()">
+	<header>
+		<div class="topnav">
+			<div class="logo top-nav-logo"> <a href="../../index.html">Ownit</a></div>
+			<div class="right-nav">
+				<a class="active" href="cart.html">Cart</a>
+				<a href="sales-by-attendant.html">Records</a>
+				<a href="specific-profile.html">Profile</a>
+				<a href="user-all-product.html">Products</a>
+				<a href="../../index.html">Logout</a>
+			</div>
+		</div>
+	</header>
+	<main>
+		<div class="wrapper">
+			<div class="heading-styler">Make Sales</div>
+			<div class="form-container">
+				<h2 id="styler">Add Item to Cart</h2>
+				<div class="login-fields">
+					<form name="cartForm" onsubmit="addToCart">
+						<div><strong>Product Name</strong></div>
+						<select name="name" class="word-field" required>
+							<option value="">Select Product</option>
+							<option value="iPhone 6">iPhone 6</option>
+							<option value="iPhone 5">iPhone 5</option>
+							<option value="iPad">iPad</option>
+							<option value="Nokia X">Nokia X</option>
+							<option value="Nokia Xl">Nokia Xl</option>
+							<option value="Nokia Note 3">Nokia Note 3</option>
+							<option value="Xiaomi One">Xiaomi One</option>
+							<option value="Xiaomi Redmi">Xiaomi Redmi</option>
+						</select>
+						<input type="submit" class="btn-account" value="Add to Cart">
+					</form>
+				</div>
+			</div>
+			<div class="table-wrapper">
+				<h1 class="heading-styler">Shopping Cart</h1>
+				<div id="shopping-cart">
+				</div>
+
+			</div>
+		</div>
+	</main>
+	<footer>
+		<div class="bottom-nav"><span class="bottom-logo"><a href="../../index.html">Ownit</a></span> Copyright &copy; 2018</div>
+	</footer>
+	<script src="../js/app.js"></script>
+	<script src="../js/cart.js"></script>
+</body>
+
+</html>
