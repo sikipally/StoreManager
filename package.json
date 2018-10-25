@@ -4,7 +4,7 @@
   "description": "A web app to help store owners manage their product inventory",
   "main": "server/index.js",
   "scripts": {
-    "start": "babel-node server/index.js",
+    "start": "babel-node server/app.js",
     "dev": "nodemon server/index.js --exec babel-node --presets babel-preset-env",
     "test": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text mocha",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
@@ -25,7 +25,6 @@
   },
   "homepage": "https://github.com/girlking/StoreManager#readme",
   "dependencies": {
-    
     "babel-eslint": "^9.0.0",
     "babel-plugin-istanbul": "^4.1.6",
     "babel-plugin-transform-class-properties": "^6.24.1",
