@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/girlking/maintainance-tracker-app.svg?branch=develop)](https://travis-ci.org/girlking/maintainance-tracker-app)
+[![Build Status](https://travis-ci.org/girlking/StoreManager.svg?branch=develop)](https://travis-ci.org/girlking/StoreManager)
 [![Coverage Status](https://coveralls.io/repos/github/girlking/StoreManager/badge.svg?branch=develop)](https://coveralls.io/github/girlking/StoreManager?branch=develop)
 [![Maintainability](https://api.codeclimate.com/v1/badges/51a63f8bb57941bb8404/maintainability)](https://codeclimate.com/github/girlking/StoreManager/maintainability)
 # Store-Manager
