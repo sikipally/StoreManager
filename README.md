@@ -1,5 +1,3 @@
-# StoreManager
-
 # Store-Manager
 
 Store Manager App is a web application that helps store owners manage sales and product inventory
