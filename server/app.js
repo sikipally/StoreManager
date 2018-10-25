@@ -3,7 +3,6 @@ import bodyParser from 'body-parser';
 import morgan from 'morgan';
 import router from './routes';
 
-
 const app = express();
 app.use(morgan('dev'));
 
