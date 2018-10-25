@@ -39,3 +39,37 @@ describe('Get Request to /products/:productId endpoint', () => {
       });
   });
 });
+
+describe('Post Request to /products endpoint', () => {
+  it('should return status 201 and the product that was created', (done) => {
+    chai.request(server)
+      .post('/products')
+      .send({
+        name: 'Tecno Camon Cx',
+        category: 'Tecno',
+        price: 60000,
+      })
+      .end((err, res) => {
+        expect(res.status).to.be.equal(201);
+        expect(res.body).to.have.property('product');
+        expect(res.body).to.have.property('product').to.be.an('object');
+        expect(res.body.product).to.have.property('id');
+        expect(res.body.product).to.have.property('price').to.equal(60000);
+        done();
+      });
+  });
+
+  it('should return status 404 if no product with the given Id is found', (done) => {
+    chai.request(server)
+      .post('/products')
+      .send({
+        name: 'Tecno Camon Cx',
+        category: 'Tecno',
+      })
+      .end((err, res) => {
+        expect(res.status).to.be.equal(400);
+        expect(res.body.status).to.be.equal('error');
+        done();
+      });
+  });
+});

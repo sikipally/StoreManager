@@ -12,7 +12,6 @@ export const getAll = (req, res) => {
   });
 };
 
-
 export const getSingle = (req, res) => {
   const { productId } = req.params;
   const product = findById(productId);
@@ -25,6 +24,27 @@ export const getSingle = (req, res) => {
   return res.status(404).json({
     status: 'error',
     message: 'No product with the given ID found. Please try again',
+  });
+};
+
+export const create = (req, res) => {
+  const { name, category, price } = req.body;
+  if (!name || !category || !price) {
+    return res.status(400).json({
+      status: 'error',
+      message: 'All fields are required. Please fill them',
+    });
+  }
+  const product = {
+    id: `234B0${products.length - 5 + 1}`,
+    name,
+    category,
+    price: parseInt(price, 10),
+  };
+  products.push(product);
+  return res.status(201).json({
+    status: 'success',
+    product,
   });
 };
 
