@@ -1,8 +1,16 @@
 'use strict';Object.defineProperty(exports, "__esModule", { value: true });exports.getSingle = exports.getAll = exports.findById = undefined;var _products = require('../models/products');var _products2 = _interopRequireDefault(_products);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 
 var findById = exports.findById = function findById(productId) {
-  var product = _products2.default.find(function (singleProduct) {return singleProduct.id === productId;});
-  return product;
+  var isFound = false;
+  var product = _products2.default.find(function (singleProduct) {
+    console.log(singleProduct);
+    singleProduct.id == productId;
+    isFound = true;
+    return singleProduct;
+  });
+  if (isFound) {
+    return singleProduct;
+  }
 };
 
 var getAll = exports.getAll = function getAll(req, res) {
