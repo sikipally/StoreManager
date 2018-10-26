@@ -4,10 +4,10 @@
   "description": "A web app to help store owners manage their product inventory",
   "main": "server/index.js",
   "scripts": {
-    "start": "npm run clean && babel server -d server/build && node server/build/index.js",
+    "start": "npm run clean && babel server -d server/build && nodemon server/build/index.js",
     "dev": "nodemon server/index.js --exec babel-node --presets babel-preset-env",
     "test": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text mocha server/test",
-    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "coverage": "/nyc report --reporter=text-lcov | coveralls",
     "coveralls": "nyc --reporter=lcov --reporter=text-lcov npm test",
     "clean": "rm -rf server/build"
   },
@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/girlking/StoreManager#readme",
   "dependencies": {
+
     "babel-cli": "^6.26.0",
     "babel-eslint": "^9.0.0",
     "babel-plugin-istanbul": "^4.1.6",
@@ -47,6 +48,7 @@
     "jsonwebtoken": "^8.2.1",
     "method-override": "^2.3.10",
     "morgan": "^1.9.0",
+    "nodemon": "^1.17.4",
     "pg": "^7.4.3"
   },
   "devDependencies": {
@@ -55,7 +57,6 @@
     "eslint": "^5.7.0",
     "eslint-plugin-import": "^2.14.0",
     "mocha": "^5.1.1",
-    "nodemon": "^1.17.4",
     "nyc": "^11.8.0"
   },
   "nyc": {
