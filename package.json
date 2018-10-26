@@ -4,7 +4,7 @@
   "description": "A web app to help store owners manage their product inventory",
   "main": "server/index.js",
   "scripts": {
-    "start": "npm run clean && babel server -d server/build && nodemon server/build/index.js",
+    "start": "npm run clean && babel server -d server/build && node server/build/index.js",
     "dev": "nodemon server/index.js --exec babel-node --presets babel-preset-env",
     "test": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text mocha server/test",
     "coverage": "/nyc report --reporter=text-lcov | coveralls",
