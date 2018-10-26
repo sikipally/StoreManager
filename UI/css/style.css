@@ -457,3 +457,17 @@ h3{
   background-size: cover;
   height: 100px;
 }
+
+@media (max-width: 600px) { 
+  .right-nav a {
+    font-size: 12px;
+    padding: 7px 9px;
+  }
+  .wrapper {
+    overflow-x: auto;
+    min-width: 500px;
+  }
+  body {
+    min-width: 500px;
+  }
+ }
